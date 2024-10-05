@@ -49,7 +49,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dropout, Flatten, Dense
 from tensorflow.keras import applications
-from tensorflow.keras.callbacks import CSVLogger 
+from tensorflow.keras.callbacks import CSVLogger
 from tqdm.keras import TqdmCallback
 
 
@@ -115,9 +115,9 @@ def train_top_model():
     model.add(Flatten(input_shape=train_data.shape[1:]))
     model.add(Dense(256, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(128, activation='relu'))  
+    model.add(Dense(256, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(64, activation='relu'))  
+    model.add(Dense(64, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(1, activation='sigmoid'))
 

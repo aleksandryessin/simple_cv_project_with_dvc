@@ -1,3 +1,6 @@
 data/
 venv
 .DS_Store
+yc_dvc.key
+/data
+/model.h5
